@@ -4,7 +4,7 @@ README - The Turing Machine Simulator for terminals
 Turing Machine Simulator for terminals is a simple simulator to run in a shell environment.
 
 * To compile, run:
- > make.
+ > make
 
 * As example, set terminal background as black and execute: 
 
