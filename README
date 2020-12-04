@@ -1,8 +1,6 @@
   
 README - The Turing Machine Simulator for terminals
 
-The Turing Machine Simulator for terminals is Free Software (see file COPYING)
- 
 Turing Machine Simulator for terminals is a simple simulator to run in a shell environment.
 
 * To compile, run:
