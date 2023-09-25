@@ -8,9 +8,9 @@ Turing Machine Simulator for terminals is a simple simulator to run in a shell e
 
 * As example, set terminal background as black and execute: 
 
-> ./turing tuplas fita
+> ./turing mt-subtracao-unaria/tuplas mt-subtracao-unaria/fita
 
 or 
 
-> ./turing tuplas fita2
+> ./turing mt-subtracao-unaria/tuplas mt-subtracao-unaria/fita2
 
