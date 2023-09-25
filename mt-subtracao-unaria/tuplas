@@ -1,0 +1,33 @@
+# Arquivo exemplo. Realiza subtração de dois números unários.
+# 
+# Tupla de inicialização
+# ( I, estado inicial, posicao inicial )
+# estado inicial:  0-9
+# posicao inicial: 0-80
+I 0 2
+#
+# Tuplas de finalização
+# ( F, estado final, leitura final )
+# estado final:  0-9
+# leitura final: 0-1
+F 6 1
+#
+# Tuplas de execução
+# (estado, leitura, escrita, sentido, novo estado)
+# estado:      0-9
+# leitura:     0-1
+# escreve:     0-1
+# sentido:     0-esquerda, 1-direita
+# novo estado: 0-9
+0 1 1 1 0
+0 0 0 1 1
+1 1 1 1 1
+1 0 0 0 2
+2 1 0 0 3
+2 0 0 1 6
+3 1 1 0 3
+3 0 0 0 4
+4 1 1 0 4
+4 0 0 1 5
+5 1 0 1 0
+5 0 0 0 6

@@ -1,0 +1,48 @@
+# Descreve Maquina de Turing que reconhece: B = {w#w | w in {0,1}^*}
+# 
+# Q = {1,2,3,4,5,6,7,8,9}, q_aceita = 9
+# Lambda = {0,1,#,x,_}
+#
+# 
+# Tupla de inicialização
+# ( I, estado inicial, posicao inicial da cabeça de leitura)
+# estado inicial:  0-9
+# posicao inicial: 0-80
+I 1 0
+#
+# Tuplas de finalização
+# ( F, estado final, 1==aceita|0==rejeita)
+# estado final:  0-9 # estado que a máquina deve estar para parar
+F 9 1
+# Q é o conjunto de estados da MT
+# Lambda é o conjunto de símbolos da fita MT
+# {E,D} são os movimentos válidos da cabeça de leitura da MT
+# Tuplas de execução: Q x Lambda -> Lambda x {E,D} x Q
+# tupla = (estado, leitura, escreve, sentido, novo estado)
+# estado:      0-9                    # estado atual da MT
+# leitura:     0,1,#,x,_                    # símbolo a ser lido da fita
+# escreve:     0                    # símbolo a ser escrito na fita
+# sentido:     0-esquerda, 1-direita  # cabeça da MT muda para D ou E
+# novo estado: 0-9                    # novo estado da MT
+1 0 x 1 2 
+1 # # 1 8
+1 1 x 1 3
+2 0 0 1 2	 
+2 1 1 1 2
+2 # # 1 4
+3 0 0 1 3
+3 1 1 1 3
+3 # # 1 5 
+8 x x 1 8
+8 _ _ 1 9 
+4 x x 1 4
+4 0 x 0 6
+5 x x 1 5
+5 1 x 0 6
+6 0 0 0 6
+6 1 0 0 6
+6 x x 0 6
+6 # # 0 7
+7 0 0 0 7
+7 1 1 0 7
+7 x x 1 1
